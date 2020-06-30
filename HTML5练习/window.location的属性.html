@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+
+	window.onload = function(){
+
+		var sData = window.location.search;
+		var oBody  = document.getElementById('body');
+
+		var sHash = window.location.hash; //通过#传参
+		alert(sHash);
+
+		if(sData != ''){
+			var aRr = sData.split("=");
+			var iNum = aRr[1];
+
+			if(iNum==1){
+				oBody.style.backgroundColor = 'pink';
+			}
+			else if(iNum==2){
+				oBody.style.backgroundColor = 'purple';
+			}
+			else {
+				oBody.style.backgroundColor = 'green';
+			}
+			// switch(iNum){
+			// 	case '1':alert(iNum); 
+			// 	case '2':alert(iNum);
+			// 	case '3':alert(iNum);
+			// }
+
+		}
+
+	}
+
+	</script>
+</head>
+<body id="body">
+	
+</body>
+</html>

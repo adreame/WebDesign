@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+
+		$(function(){
+
+			var $btn = $('.btns input');
+			var $div = $('.cons div');
+
+			$btn.click(function(){
+
+				//this表示当前点击的对象
+				$(this).addClass('current').siblings().removeClass('current');
+				// alert($(this).index());
+				
+				$div.eq($(this).index()).addClass('active').siblings().removeClass('active');
+
+			})
+
+		})
+
+
+	</script>
+</head>
+<style type="text/css">
+	.btns input{
+		width: 100px;
+		height: 40px;
+		background-color:pink;
+		border:0;
+	}
+
+	.btns .current{
+		background-color:red;
+	}
+
+	.cons div{
+		height:300px;
+		width: 500px;
+		font-size: 30px;
+		text-align: center;
+		line-height: 300px;
+		background-color:purple;
+		display:none;
+	}
+
+	.cons .active{
+		display:block;
+	}
+
+</style>
+<body>
+	<div class="btns">
+		<input type="button" value="01" class="current">
+		<input type="button" value="02">
+		<input type="button" value="03">
+	</div>
+
+	<div class="cons">
+		<div class="active">选项卡一</div>
+		<div>选项卡二</div>
+		<div>选项卡三</div>
+	</div>
+</body>
+</html>

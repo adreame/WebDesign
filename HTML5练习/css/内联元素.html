@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!--
+		内联元素: a span b strong i em
+				不支持宽高,不支持margin和padding的上下
+				宽高由内容决定
+				代码换行,盒子之间产生间隙
+		块元素: div p ul li h1-h6 dl dt dd
+				如果没有设置宽度默认为父级宽度			支持全部样式
+				盒子占据一行
+	 -->
+	<style type="text/css">
+		
+		.box{
+			width: 500px;
+			height: 300px;
+			border: 1px solid #000;
+			margin: 50px auto 0px;
+
+			/*解决内联元素的间隙*/
+			font-size: 0px; 
+		}
+
+		.box a{
+			background-color: pink;
+			width: 200px;
+			height: 200px;
+			/*margin: 100px 20px;*/
+			padding:0px 20px;
+
+			/*解决内联元素的间隙*/
+			font-size: 16px;
+		}
+
+		.box2{
+			width: 500px;
+			height: 100px;
+			border: 1px solid #000;
+			margin: 50px auto 0px;
+			text-align: center;			
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="box">
+		<a href="#">链接1</a>
+		<a href="#">链接2</a>
+		<a href="#">链接3</a>
+		<a href="#">链接4</a>
+		<a href="#">链接5</a>
+		<a href="#">链接6</a>		
+	</div>
+	<div class="box2">
+		<a href="#">链接</a>
+	</div>
+</body>
+</html>

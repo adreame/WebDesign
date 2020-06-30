@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+
+			var $a = $('.link');
+			var $img = $('#img01');
+			var $div = $('#div1');
+
+			console.log($a.prop('class'));
+
+			console.log($img.prop('src')); //获取图片绝对地址
+
+			console.log($a.html()); //读取标签内包含的内容
+
+			$div.html('<span>div里的span元素</span>');  //向标签里添加内容
+
+
+
+
+			$a.prop({'href':'http://www.baidu.com','title':'百度网来链接'});
+
+
+
+		})
+	</script>
+</head>
+<body>
+	<a href="#" class="link">这是一个链接</a>
+	<img src="images/001.jpg" id="img01" alt="风景">
+
+	<div id="div1"></div>
+</body>
+</html>

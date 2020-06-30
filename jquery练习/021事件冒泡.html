@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		
+		$(function(){
+
+			//事件冒泡:根据标签位置向上传
+			// event.stopPropagation()  //阻止冒泡
+			// event.preventDefault()  //阻止默认行为
+			// 以上二者合并,可以简写为:return false
+
+			$('.son').click(function(event){
+				alert(1);
+				// event.stopPropagation();  //阻止事件冒泡
+			})
+
+			$('.father').click(function(event){
+				alert(2);
+				// event.stopPropagation();
+			})
+
+			$('.grandfather').click(function(){
+				alert(3);
+				return false;
+			})
+
+			$(document).click(function(){
+				alert(4);
+			})
+		})
+
+	</script>
+	<style type="text/css">
+		.grandfather{
+			width: 300px;
+			height: 300px;
+			position:relative;
+			background-color: red;
+		}
+
+		.father{
+			width: 200px;
+			height: 200px;
+			background-color: pink;
+		}
+
+		.son{
+			width: 100px;
+			height: 100px;
+			position:absolute;
+			left:0;
+			top:400px;
+			background-color: gold;
+		}
+	</style>
+</head>
+<body>
+	<div class="grandfather">
+		<div class="father">
+			<div class="son"></div>
+		</div>
+	</div>
+</body>
+</html>

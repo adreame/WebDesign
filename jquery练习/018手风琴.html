@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<style type="text/css">
+		
+		*{
+			margin:0;
+			padding:0;
+		}
+
+		body{font-size:12px;}
+		
+		#accordion{
+			width:904px;
+			height:500px;
+			margin:100px auto 0 auto;
+			position:relative;
+			overflow:hidden;
+			border:1px solid #ccc;
+		}
+
+		#accordion ul{list-style:none;}
+
+		#accordion ul li{
+			width:820px;
+			height:500px;
+			position:absolute;
+			background-color:#fff;
+		}
+
+		#accordion ul li span{
+			display:block;
+			width:20px;
+			height:500px;
+			float:left;
+			text-align:center;	
+			color:#fff;
+			padding-top:5px;
+			cursor:pointer;
+		}
+
+		#accordion ul li img{
+			display:block;
+			float:right;
+		}
+
+		.bar01{left:0;}
+
+		.bar02{left:820px;}
+
+		.bar03{left:841px;}
+
+		.bar04{left:862px;}
+
+		.bar05{left:883px;}
+
+		.bar01 span{background-color:#09e0b5;}
+
+		.bar02 span{background-color:#3d7fbb;}
+
+		.bar03 span{background-color:#5ca716;}
+
+		.bar04 span{background-color:#f28824;}
+
+		.bar05 span{background-color:#7c0070;}
+
+	</style>
+	<script type="text/javascript">
+		$(function(){
+
+			var $li = $('#accordion li');
+
+			$li.click(function(){
+
+				$(this).animate({'left':21*$(this).index()});
+
+				$(this).prevAll().each(function(){
+
+					$(this).animate({'left':21*$(this).index()});
+				})
+
+				$(this).nextAll().each(function(){
+
+					$(this).animate({'left':904-21*(5-$(this).index())});
+				})				
+			})
+		})
+	</script>
+</head>
+<body>
+	<div id="accordion">
+		<ul>
+			<li class="bar01"><span>风景01</span><img src="images/001.jpg" alt=""></li>
+			<li class="bar02"><span>风景02</span><img src="images/002.jpg" alt=""></li>
+			<li class="bar03"><span>风景03</span><img src="images/003.jpg" alt=""></li>
+			<li class="bar04"><span>风景04</span><img src="images/004.jpg" alt=""></li>
+			<li class="bar05"><span>风景05</span><img src="images/005.jpg" alt=""></li>
+		</ul>
+	</div>
+	
+</body>
+</html>

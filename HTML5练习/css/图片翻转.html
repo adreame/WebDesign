@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		
+		.box{
+			width: 800px;
+			height: 250px;
+			border: 1px solid black;
+			margin: 50px auto 0px;
+			position: relative;
+
+			transform-style: preserve-3d;
+			}
+
+		.box img{
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			transform: perspective(800px) rotateY(0deg);
+			transition: all 500ms ease;
+			backface-visibility: hidden;
+		}
+
+
+		.box:hover img{
+			transform: perspective(800px) rotateY(180deg);
+		}
+
+		.box .back{
+			position: absolute;
+			background-color: purple;
+			height: 250px;
+			width: 375px;
+			left: 0px;
+			top: 0px;
+			font-size: 20px;
+			text-align: center;
+			line-height: 250px;
+			transform: perspective(800px) rotateY(-180deg);
+			transition: all 500ms ease;
+			backface-visibility: hidden;			
+		}
+
+		.box:hover .back{
+			transform: perspective(800px) rotateY(0deg);
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<div class="box">
+		<img src="image/004.jpg" alt="风景图">
+		<div class="back">说明文字</div>
+	</div>
+</body>
+</html>

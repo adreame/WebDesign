@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		
+		$(function(){
+
+			var $li = $('.list li');
+
+			$li.each(function(i){
+
+				// alert(i);
+				
+				if($(this).index()%2==0){
+
+					$(this).css({'background-color':'pink'});
+				}
+			})
+
+		})
+	</script>
+</head>
+<body>
+	<div class="list">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+	</div>
+</body>
+</html>

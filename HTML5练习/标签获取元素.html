@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		
+		window.onload = function(){
+
+			var aLi = document.getElementsByTagName('li');
+
+			//alert(aLi.length);
+
+			//不能给选择集设置属性
+			//aLi.style.backgroundcolor = 'gold';
+		
+
+			// var iLen = aLi.length;
+			// for(var i=0; i<iLen; i++){
+			// 	aLi[i].style.backgroundColor = 'pink';
+			// }
+
+
+			var oUl = document.getElementById('list2');
+			var aLi2 = oUl.getElementsByTagName('li');
+
+			var iLen2 = aLi2.length;
+			for(var i=0; i<iLen2; i++){
+				
+				if(i%2==0){
+					aLi2[i].style.backgroundColor = 'pink';
+				}
+
+
+			}
+
+
+
+
+
+
+		}
+
+	</script>
+</head>
+<body>
+	
+	<ul id="list1">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+	</ul>
+
+	<ul id="list2">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+	</ul>
+
+
+</body>
+</html>

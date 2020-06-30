@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.box{
+			width: 300px;
+			height: 200px;
+			border: 1px solid #000;
+			margin: 50px auto 0;
+			background-color: pink;
+			line-height: 20px;
+			/*
+				visible:缺省值,溢出元素可见;
+				hidden:将溢出的元素裁切隐藏;
+				scroll:显示滚动条,不管是否益处;
+				auto:按照溢出的时候产生滚动条,不溢出无滚动条;	
+			 */
+			overflow: auto;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box">
+（1）搅拌器液位的高低由一个模拟量液位传感器-变送器来检测。液位检测范围0~3m。
+（2）按起动按钮后系统自动运行，首先打开进料阀1，开始加入液料A
+（3）当液位达到设定值1后，则关闭进料阀1，打开进料阀2，开始加入液料B。
+（4）当液位达到设定值2后，则关闭进料阀2，起动搅拌器，搅拌时间到，关闭搅拌器，开启放料阀。
+（4）当液位达到设定值3后，延时5s后关闭放料阀。
+（5）按停止按钮，系统应立即停止运行。
+（6）搅拌器设置有高液位限位检测，液位传感器采用开关量液位传感器（常闭），高液位传感器动作，系统必须停止运行。</div>	
+</body>
+</html>

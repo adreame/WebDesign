@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<style type="text/css">
+		
+	body{
+		margin:0;
+	}
+
+	.banner{
+		width: 800px;
+		height: 200px;
+		margin:0 auto 0;
+		background-color: purple;
+	}
+
+	.menu_back{
+		height: 80px;
+		width: 800px;
+		margin:0 auto;
+		display: none;
+	}
+
+	.menu{
+		width:800px;
+		height: 80px;
+		background-color:pink;
+		text-align: center;
+		line-height: 80px; 
+		margin:0 auto 0;
+	}
+
+	p{
+		color:red;
+		text-align: center;
+	}
+
+	.totop{
+		width: 100px;
+		height: 100px;
+		color:white;
+		background-color:pink;
+		position: fixed;
+		right: 50px;
+		bottom: 50px;
+		font-size: 40px;
+		text-align: center;
+		line-height: 100px;
+		border-radius: 50%;
+		cursor: pointer;
+
+	}
+	</style>
+	<script type="text/javascript">
+		
+		$(function(){
+
+			$menu = $('.menu');
+			$menu_back = $('.menu_back');
+			$totop = $('.totop');
+
+			$(window).scroll(function(){
+
+				var iNum = $(document).scrollTop();
+				 // document.title = iNum;
+				
+				if(iNum>200)
+				{
+
+					$menu.css({
+						'position':'fixed',
+						'left':'50%',
+						'top':0,
+						'marginLeft':-400
+					})
+					$menu_back.show();
+				}
+
+				else
+				{
+					$menu.css({
+						'position':'static',
+						'marginLeft':'auto'
+					})
+					$menu_back.hide();
+				}
+			})
+
+			$totop.click(function(){
+
+				$('html,body').animate({'scrollTop':0});
+
+			})
+		})
+
+
+
+
+
+
+	</script>
+</head>
+<body>
+	<div class="banner"></div>
+	<div class="menu_back"></div>
+	<div class="menu">菜单</div>
+	<div class="totop">👆</div>
+
+	<p>文档内容</p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+		<p>文档内容</p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+		<p>文档内容</p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+		<p>文档内容</p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+		<p>文档内容</p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+		<p>文档内容</p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+		<p>文档内容</p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+		<p>文档内容</p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+		<p>文档内容</p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+</body>
+</html>

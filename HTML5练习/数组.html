@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		
+		// 通过实例化创建数组
+		var aList01 = new Array(1,3,4);
+
+		// 通过直接量创建数组
+		var aList02 = ['list',1,2,3,4,5];
+
+		alert(aList02.length); //弹出 6
+		alert(aList02[0]); //弹出 list 
+
+		aList02.push('a'); //在数组后添加值
+		alert(aList02); //弹出 list,1,2,3,4,5,a 
+
+		aList02.pop(); //在数组后删除值
+		alert(aList02); //弹出 list,1,2,3,4,5  
+
+		aList02.unshift('b'); //在数组前添加值
+		alert(aList02); //弹出 b,list,1,2,3,4,5  
+
+		aList02.shift('b'); //在数组前删除值
+		alert(aList02); //弹出 list,1,2,3,4,5 
+
+		aList02.reverse(); //反转数组
+		alert(aList02); //弹出 5,4,3,2,1,list 
+
+		var aList03 = [4,5,6,7,8,9,5];
+		alert(aList03.indexOf(5));  //返回第一次出现的位置 1
+
+		//第一个参数开始位置,第二个参数为删除元素的个数,第三个及以后的参数为添加的元素
+		aList03.splice(1,0,'e','f','g'); //从第2个元素开始,删除0个元素,添加'e','f','g'
+		alert(aList03); //弹出 4,e,f,g,5,6,7,8,9,5 
+
+		var sTr = aList03.join('-'); //返回一个用-连接的字符串
+		alert(sTr); //弹出 4-e-f-g-5-6-7-8-9-5
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

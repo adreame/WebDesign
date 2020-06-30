@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+
+			$('#btn').click(function(){
+
+				/*
+				if($('.box').hasClass('col01')){
+				  	$('.box').removeClass('col01');
+				}
+				else{
+					$('.box').addClass('col01');
+				}
+				*/
+				
+				//简化为这一句
+				$('.box').toggleClass('col01');
+				
+			})
+
+
+
+
+
+		})
+	</script>
+</head>
+<style type="text/css">
+	.box{
+		width:200px;
+		height: 200px;
+		background-color:pink;
+	}
+
+	.col01{
+		background-color:purple;
+	}
+</style>
+<body>
+	<input type="button" value="change style" id="btn">
+	<div class="box">this is a div</div>
+</body>
+</html>

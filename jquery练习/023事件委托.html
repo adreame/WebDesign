@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<style type="text/css">
+		.list{
+			background-color: #666;
+		}
+
+		.list li{
+			height: 30px;
+			background-color: pink;
+			margin:10px;
+		}
+	</style>
+	<script type="text/javascript">
+		
+		$(function(){
+
+			//每个li都绑了一次click事件,性能不高,不能绑定动态加入的元素
+
+			// $('.list li').click(function(){
+
+			// 	$(this).css({'background-color':'red'});
+			// });
+
+
+			
+			// 事件委托,减少绑定次数,提高性能,能绑定动态加入的元素
+			$('.list').delegate('li', 'click', function(event) {
+
+				//$(this)指委托的子元素
+				
+				$(this).css({'background-color':'red'});
+
+			});
+
+			//新建一个li
+			var $li = $('<li>9</li>');
+			//把新建的li放到div子集的最后面
+			$('.list').append($li);			
+
+		})
+	</script>
+</head>
+<body>
+	<div class="list">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+	</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		
+		$(function(){
+
+			$div1 = $('#div1');
+			alert($div1.length); //返回值>0表示选中,=0表示未选中
+
+			$div2 = $('#div2'); //程序不会报错
+			alert($div2.length);		
+
+
+
+
+	})
+
+	</script>
+</head>
+<body>
+	<div id="div1">div元素</div>
+</body>
+</html>

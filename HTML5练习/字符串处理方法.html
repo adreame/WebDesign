@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<!-- 
+		字符串拼接: +
+		parseInt(): 数字字符串转化为整数
+		parseFloat(): 将数字字符串转化为小数
+		split(): 将字符串分割为字符串组成的数组
+		charAt(): 获取字符串中的某一个字符
+		indexOf(): 查询字符串是否含有某字符
+		substring(): 截取字符串 substring(start,end)(不包含end)
+		toUpperCase(): 字符串转大写
+		toLowerCase(): 字符串转小写
+	 -->
+
+	<script type="text/javascript">
+		
+		var iNum = 12;
+		var sNum = '24.35';
+		var sTr = 'abcABC';
+
+		//alert(iNum+sNum);
+		//alert(parseInt(sNum));
+		//alert(parseFloat(sNum));
+
+		var sTr2 = '2019-10-16';  
+		var aRr = sTr2.split('-');
+		//alert(aRr); //弹出 ['2019','10','16']
+
+		var sTr3 = sTr.charAt(3);
+		//alert(sTr3); //弹出A
+		
+		var iNum2 = sTr.indexOf('AB'); 
+		var iNum3 = sTr.indexOf('D'); 
+		//alert(iNum2); //存在弹出对应位置3,不存在弹出-1
+		//alert(iNum3);
+
+		var sTr4 = sTr.substring(0,3);
+		//alert(sTr4); //弹出 abc
+		
+		var sTr5 = sTr.toUpperCase();
+		//alert(sTr5); //字符串转大写 弹出ABCABC
+		
+		var sTr6 = sTr.toLowerCase();
+		//alert(sTr6); //字符串转大写 弹出abcabc
+		
+		var sTr7 = 'asdfghjkl';
+		var sTr8 = sTr7.split('').reverse().join('');
+		alert(sTr8); //字符串反转 弹出lkjhgfdsa
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

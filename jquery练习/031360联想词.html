@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../js/jquery-1.12.4.min.js"></script>
+
+    <script>
+        $(function () {
+            // 获取文本标签
+            var $ipt = $("#keywords");
+            // 添加一个内容改变的事件
+            $ipt.keyup(function () {
+                var sValue = $ipt.val();
+                document.title = sValue;
+                get_data(sValue)
+            })
+
+        })
+
+
+        function get_data(sValue) {
+        var u = "https://sug.so.360.cn/suggest?callback=suggest_so&encodein=utf-8&encodeout=utf-8&format=json&fields=word&word=" + sValue;
+        $.ajax({
+            url: u,
+            type: "GET",
+            dataType: "jsonp",
+            jsonpCallback:"suggest_so"
+        }).done(function (dat) {
+            // 清空ul标签的内容
+            $("ul").empty();
+
+
+            var data = dat.result
+            var data_len = data.length;
+            // 遍历拿到全部的内容
+            for(var i=0;i<data_len;i++){
+            // 创建一个li的标签节点
+            $li = $("<li>");
+            content = data[i].word;
+            $li.html(content);
+            // ul标签添加li标签
+            $("ul").append($li);
+            }
+        }).fail(function () {
+            alert("fail");
+        })
+        }
+
+    </script>
+</head>
+<body>
+	
+</body>
+</html>

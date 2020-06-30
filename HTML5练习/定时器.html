@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		
+		function myalert(){
+			alert('Hello word!');
+		}
+
+		//只执行一次,第一个参数为要执行的函数,第二个参数为定时时间(ms)
+		//var Timer01 = setTimeout(myalert,2000);
+
+		//关闭只执行一次的定时器
+		//clearTimeout(Timer01);
+
+		// 反复执行
+ 		//var Timer02 = setInterval(myalert,1000);
+
+ 		//关闭反复执行的定时器
+ 		//clearInterval(Timer02);
+ 		
+ 		var Timer03 = setInterval(function(){
+ 			alert('Hello word');
+ 		},2000)
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

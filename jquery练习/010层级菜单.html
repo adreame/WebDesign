@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<style type="text/css">
+
+		*{
+			margin:0;
+			padding:0;
+		}
+
+		ul{list-style:none;}
+
+		.menu{
+			width:200px;
+			margin:20px auto 0;
+		}
+
+		.menu .level1, .menu li ul a{
+			display:block;
+			width:200px;
+			height:30px;
+			line-height:30px;
+			text-decoration:none;
+			background-color:#f0f;
+			color:black;
+			font-size:18px;
+			text-indent:10px;
+		}
+
+		.menu .level1{
+			border-bottom:1px solid red;
+		}
+
+		.menu li ul a{
+			font-size:16px;
+			text-indent:20px;
+			background-color:#f8f;
+		}
+
+		.menu li ul li{
+			border-bottom:1px solid #ff00f0;
+		}
+
+		.menu li ul{
+			display:none;
+		}
+
+		/*.menu li ul.current{
+			display:block;
+		}*/
+
+		.menu li ul li a:hover{
+			background-color:pink;
+		}
+
+	</style>
+	<script type="text/javascript">
+		$(function(){
+
+			$('.level1').click(function(){
+				$(this).next().stop().slideToggle().parent().siblings().children('ul').slideUp();
+			});
+		})
+	</script>
+</head>
+<body>
+	<ul class="menu">
+		<li>
+			<a href="#" class="level1">水果</a>
+			<ul class="current">
+				<li><a href="#">苹果</a></li>
+				<li><a href="#">香蕉</a></li>
+				<li><a href="#">葡萄</a></li>
+				<li><a href="#">火龙果</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#" class="level1">海鲜</a>
+			<ul>
+				<li><a href="#">扇贝</a></li>
+				<li><a href="#">龙虾</a></li>
+				<li><a href="#">鱿鱼</a></li>
+				<li><a href="#">螃蟹</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#" class="level1">肉类</a>
+			<ul>
+				<li><a href="#">猪肉</a></li>
+				<li><a href="#">牛肉</a></li>
+				<li><a href="#">羊肉</a></li>
+				<li><a href="#">鸡肉</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#" class="level1">蔬菜</a>
+			<ul>
+				<li><a href="#">白菜</a></li>
+				<li><a href="#">菠菜</a></li>
+				<li><a href="#">青椒</a></li>
+				<li><a href="#">茄子</a></li>
+				<li><a href="#">西红柿</a></li>
+				<li><a href="#">土豆</a></li>				
+			</ul>
+		</li>
+		<li>
+			<a href="#" class="level1">速冻</a>
+			<ul>
+				<li><a href="#">冰淇淋</a></li>
+				<li><a href="#">...</a></li>
+			</ul>
+		</li>
+	</ul>
+</body>
+</html>

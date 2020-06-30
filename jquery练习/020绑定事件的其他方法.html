@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		
+		$(function(){
+
+			$('#btn').bind('click mouseover',function(){
+
+				alert('bind');
+
+				$(this).unbind('mouseover'); //解绑
+			})
+
+
+
+
+		})
+	</script>
+</head>
+<body>
+	<input type="button" name="" value="bind" id="btn">
+</body>
+</html>
